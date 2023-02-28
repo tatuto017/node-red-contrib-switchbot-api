@@ -1,0 +1,1 @@
+# node-red-contrib-switchbot-api-v1.1
