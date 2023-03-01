@@ -1,0 +1,51 @@
+<script type="text/javascript">
+  RED.nodes.registerType('switchbot-authentication', {
+    category: 'config',
+    defaults: {
+      name: { value: "name", required: true },
+      token: { value: "token", required: true },
+      secret: { value: "secret", required: true },
+    },
+    label: function () {
+      return this.name || 'switchbot-authentication';
+    }
+  });
+</script>
+
+<!-- 編集画面 -->
+<script type="text/html" data-template-name="switchbot-authentication">
+  <div class="form-row">
+      <label for="node-config-input-name"><i class="fa fa-bookmark"></i> Name</label>
+      <input type="text" id="node-config-input-name">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-token"><i class="fa fa-bookmark"></i> API token</label>
+    <input type="text" id="node-config-input-token">
+</div>
+<div class="form-row">
+      <label for="node-config-input-secret"><i class="fa fa-bookmark"></i> Secret Key</label>
+      <input type="text" id="node-config-input-secret">
+  </div>
+</script>
+
+<!-- ヘルプ -->
+<script type="text/html" data-help-name="switchbot-authentication">
+  <p>A node that controls SwitchBot devices using SwitchBot's <code>command</code> web API</p>
+
+  <h3>Inputs</h3>
+  <dl class="message-properties">
+    <dt>Name <span class="property-type">string</span></dt>
+    <dd>The name of the setting.</dd>
+
+    <dt>API token <span class="property-type">string</span></dt>
+    <dd>The developer API token which is generated from the official SwitchBot app; simply follow the steps in the package's README.</dd>
+
+    <dt>Secret Key <span class="property-type">string</span></dt>
+    <dd>The developer Secret Key which is generated from the official SwitchBot app; simply follow the steps in the package's README.</dd>
+  </dl>
+
+  <h3>References</h3>
+  <ul>
+    <li><a href="https://github.com/OpenWonderLabs/SwitchBotAPI">SwitchBot's official API documentation page</a></li>
+  </ul>
+</script>
